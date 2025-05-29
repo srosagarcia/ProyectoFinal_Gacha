@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./GachaArmas.css";
 
 function GachaArmas() {
     const getInitialPity = () => {
@@ -15,12 +16,14 @@ function GachaArmas() {
         localStorage.setItem("pityArmas", pullCount.toString());
     }, [pullCount]);
 
+    const root="http://localhost:8080/images/banner/armas/";
+
     const pool = [
-        { name: "Espada", image: "/images/sword.png", stars: 4 },
-        { name: "Arco", image: "/images/bow.png", stars: 3 },
-        { name: "Lanza", image: "/images/spear.png", stars: 5 },
-        { name: "Hacha", image: "/images/axe.png", stars: 4 },
-        { name: "Cetro", image: "/images/staff.png", stars: 5 },
+        { name: "Mistsplitter", image: root + "mistsplitter.png", stars: 5 },
+        { name: "Aqua Simulacra", image: root + "aqua_simulacra.png", stars: 3 },
+        { name: "Báculo de Homa", image: root + "baculo_homa.png", stars: 5 },
+        { name: "Favonius", image: root + "codice_favonius.png", stars: 4 },
+        { name: "Sacrificio", image: root + "mandoble_sacrificio.png", stars: 3 },
     ];
 
     const pullItem = (currentCount) => {
@@ -38,16 +41,14 @@ function GachaArmas() {
         return candidates[Math.floor(Math.random() * candidates.length)];
     };
 
-    const animatePull = (pulled, isX10) => {
+    const animatePull = (pulled) => {
         setAnimating(true);
         setResults([]);
 
-        const generatedParticles = pulled.map((item, index) => ({
-            id: index,
-            color: isX10 || item.stars === 5 ? "gold" : item.stars === 4 ? "purple" : "blue",
-        }));
+        let maxRarity = pulled.reduce((max, item) => Math.max(max, item.stars), 3);
+        let color = maxRarity === 5 ? "gold" : maxRarity === 4 ? "purple" : "blue";
 
-        setParticles(generatedParticles);
+        setParticles(pulled.map((_, i) => ({ id: i, color })));
 
         setTimeout(() => {
             setParticles([]);
@@ -74,15 +75,21 @@ function GachaArmas() {
 
     return (
         <div className="screen dark">
-            <h2 className="title">Banner de Armas</h2>
-            <p>Pity actual: <strong>{pullCount}</strong> / 50</p>
+            <img
+                src="http://localhost:8080/images/banner/armas/banner_armas.png"
+                alt="Banner de armas"
+                className="banner-image"
+            />
+
+            <h2 className="title">Gacha de Armas</h2>
+            <p className={'p'}>Pity actual: <strong>{pullCount}</strong> / 50</p>
 
             <div className="button-group">
                 <button className="gacha-btn" onClick={() => handlePull(1)}>Tirada x1</button>
                 <button className="gacha-btn" onClick={() => handlePull(10)}>Tirada x10</button>
             </div>
 
-            <div className="animation-area">
+            <div className={`animation-area ${animating ? "expanded" : "collapsed"}`}>
                 {particles.map(p => (
                     <div key={p.id} className={`particle ${p.color}`}></div>
                 ))}
@@ -91,7 +98,7 @@ function GachaArmas() {
             <div className="result-grid">
                 {results.map((r, i) => (
                     <div className="card result large-card" key={i}>
-                        <img src={r.image} alt={r.name} />
+                        <img src={r.image} alt={r.name}/>
                         <h3>{r.name}</h3>
                         <p>{"★".repeat(r.stars)}</p>
                     </div>

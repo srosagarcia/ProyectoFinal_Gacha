@@ -4,7 +4,58 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7e18bdd-0dcd-4764-b6ed-1a8b25e4156d" name="Changes" comment="" />
+    <list default="true" id="d7e18bdd-0dcd-4764-b6ed-1a8b25e4156d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/es/cheste/backend/controller/CombateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/es/cheste/backend/model/Personaje.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/es/cheste/backend/service/CombateService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/static/images/banner/armas/aqua_simulacra.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/static/images/banner/armas/baculo_homa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/static/images/banner/armas/banner_armas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/static/images/banner/armas/codice_favonius.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/static/images/banner/armas/mandoble_sacrificio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/static/images/banner/armas/mistsplitter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/static/images/banner/personajes/dan_heng.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/static/images/banner/personajes/firefly.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/static/images/banner/personajes/gallagher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/static/images/banner/personajes/xueyi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/static/images/enemigos/espada-bajo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/static/images/enemigos/maza-bajo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/static/images/selector/fondo_selector.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/images/reset.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/gacha/gacha_armas/GachaArmas.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/gacha/gacha_personajes/GachaPersonajes.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/modo_historia/Combate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/selector_niveles/NivelSelector.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/selector_niveles/NivelSelector.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/es/cheste/backend/BackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/es/cheste/backend/CombateApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/es/cheste/backend/controller/GachaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/es/cheste/backend/entidades/Arma.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/es/cheste/backend/entidades/ArmaUsuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/es/cheste/backend/entidades/Personaje.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/es/cheste/backend/entidades/PersonajeUsuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/es/cheste/backend/entidades/Usuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/es/cheste/backend/repositorios/ArmaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/es/cheste/backend/repositorios/ArmaUsuarioRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/es/cheste/backend/repositorios/PersonajeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/es/cheste/backend/repositorios/PersonajeUsuarioRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/es/cheste/backend/repositorios/UsuarioRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/es/cheste/backend/BackendApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/es/cheste/backend/CombateApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/images/7Marzo.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/images/banner/personajes/7Marzo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/images/Acheron.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/images/personajes/acheron.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/images/Castorice.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/images/personajes/castorice.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/images/bannerCastorice.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/images/banner/personajes/bannerCastorice.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/NavBar/NavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/NavBar/NavBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/gacha/gacha_armas/GachaArmas.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/gacha/gacha_armas/GachaArmas.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/gacha/gacha_personajes/GachaPersonajes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/gacha/gacha_personajes/GachaPersonajes.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/modo_historia/Historia.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/modo_historia/Combate.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vite.config.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,12 +70,16 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/frontend" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="8f503333-c9ca-48e1-b1f9-2c9dce7d3ac5" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2wzV2wWze7ShteoZxqLwtrXMZXi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -32,11 +87,17 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JavaScript Debug.Debug Application.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.CombateApplication.executor": "Run",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "zulu-17",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/sergi/IdeaProjects/ProyectoGacha/frontend",
+    "last_opened_file_path": "C:/Users/sergi/IdeaProjects/ProyectoGacha/frontend/public/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -47,22 +108,31 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sergi\IdeaProjects\ProyectoGacha\frontend\public\images" />
       <recent name="C:\Users\sergi\IdeaProjects\ProyectoGacha" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sergi\IdeaProjects\ProyectoGacha\backend\src\main\resources\static\images\selector" />
+      <recent name="C:\Users\sergi\IdeaProjects\ProyectoGacha\backend\src\main\resources\static\images\banner\armas" />
+      <recent name="C:\Users\sergi\IdeaProjects\ProyectoGacha\backend\src\main\resources\static\images\banner\personajes" />
+      <recent name="C:\Users\sergi\IdeaProjects\ProyectoGacha\backend\src\main\resources\static\images\banner" />
+      <recent name="C:\Users\sergi\IdeaProjects\ProyectoGacha\backend\src\main\resources\static\images\personajes" />
+    </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Debug Application">
+  <component name="RunManager" selected="Spring Boot.CombateApplication">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
-    <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="CombateApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="backend" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="es.cheste.backend.BackendApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="es.cheste.backend.CombateApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -84,7 +154,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1747044186326</updated>
-      <workItem from="1747044187253" duration="1748000" />
+      <workItem from="1747044187253" duration="3899000" />
+      <workItem from="1747126509564" duration="1003000" />
+      <workItem from="1748183850499" duration="15351000" />
+      <workItem from="1748230350807" duration="297000" />
+      <workItem from="1748273989033" duration="7617000" />
+      <workItem from="1748379003380" duration="2119000" />
+      <workItem from="1748451038475" duration="243000" />
+      <workItem from="1748529434399" duration="22426000" />
     </task>
     <servers />
   </component>

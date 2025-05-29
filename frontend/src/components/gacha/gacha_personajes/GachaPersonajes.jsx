@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./GachaPersonajes.css";
 
 export default function GachaPersonajes() {
     const [results, setResults] = useState([]);
@@ -19,13 +20,13 @@ export default function GachaPersonajes() {
 
 
     const pool = [
-        { name: "Castorice", image: "/images/Castorice.png", stars: 5 },
-        { name: "Acheron", image: "/images/Acheron.png", stars: 4 },
-        { name: "7 Marzo", image: "/images/7Marzo.png", stars: 3 },
-        { name: "Hilda", image: "/images/hilda.png", stars: 4 },
-        { name: "Otra3", image: "/images/other3.png", stars: 3 },
-        { name: "Otra4", image: "/images/other4.png", stars: 4 },
-        { name: "Otra5", image: "/images/other5.png", stars: 5 },
+        { name: "Castorice", image: "http://localhost:8080/images/personajes/castorice.png", stars: 5 },
+        { name: "Acheron", image: "http://localhost:8080/images/personajes/acheron.png", stars: 4 },
+        { name: "7 Marzo", image: "http://localhost:8080/images/banner/personajes/7Marzo.png", stars: 3 },
+        { name: "Gallagher", image: "http://localhost:8080/images/banner/personajes/gallagher.png", stars: 4 },
+        { name: "Dan Heng", image: "http://localhost:8080/images/banner/personajes/dan_heng.png", stars: 3 },
+        { name: "Xueyi", image: "http://localhost:8080/images/banner/personajes/xueyi.png", stars: 4 },
+        { name: "Firefly", image: "http://localhost:8080/images/banner/personajes/firefly.png", stars: 5 },
     ];
 
     const pullCharacter = (currentCount) => {
@@ -76,14 +77,13 @@ export default function GachaPersonajes() {
     return (
         <div className="screen dark">
             <img
-                src="/images/bannerCastorice.png"
+                src="/images/banner/personajes/bannerCastorice.png"
                 alt="Banner de personajes"
                 className="banner-image"
-                style={{ width: "100%", maxHeight: "200px", objectFit: "cover", marginBottom: "1rem" }}
             />
 
             <h2 className="title">Gacha de Personajes</h2>
-            <p>Pity actual: <strong>{pullCount}</strong> / 50</p>
+            <p className={'p'}>Pity actual: <strong>{pullCount}</strong> / 50</p>
 
             <div className="button-group">
                 <button className="gacha-btn" onClick={() => handlePull(1)}>Tirada x1</button>

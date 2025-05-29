@@ -9,7 +9,8 @@ import MainMenu from "./components/main_menu/MainMenu.jsx";
 import GachaPersonajes from "./components/gacha/gacha_personajes/GachaPersonajes.jsx";
 import GachaArmas from "./components/gacha/gacha_armas/GachaArmas.jsx";
 import Inventario from "./components/inventario/Inventario.jsx";
-import Historia from "./components/modo_historia/Historia.jsx";
+import Historia from "./components/modo_historia/Combate.jsx";
+import NivelSelector from "./components/selector_niveles/NivelSelector.jsx";
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
                     <Route path="/gacha/armas" element={<GachaArmas />} />
                     <Route path="/inventario" element={<Inventario />} />
                     <Route path="/historia" element={<Historia />} />
+                    <Route path="/niveles" element={<NivelSelector />} />
                 </Routes>
             </Layout>
         </Router>

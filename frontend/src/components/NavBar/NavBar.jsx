@@ -17,7 +17,7 @@ function NavBar() {
                     <button onClick={() => navigate("/gacha/armas")}>Armas</button>
                 </div>
             )}
-            <button className="nav-btn" onClick={() => navigate("/historia")}>
+            <button className="nav-btn" onClick={() => navigate("/niveles")}>
                 Modo Historia
             </button>
         </nav>

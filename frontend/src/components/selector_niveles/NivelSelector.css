@@ -1,0 +1,88 @@
+.selector-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 94vh;
+    width: 200vh;
+
+    font-family: 'Press Start 2P', cursive;
+    background-image: url('http://localhost:8080/images/selector/fondo_selector.gif');
+    background-size: cover; /* o contain según necesites */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.loading {
+    background: #000;
+    color: white;
+}
+
+.barra-carga {
+    width: 400px;
+    height: 30px;
+    border: 2px solid white;
+    margin-bottom: 20px;
+    position: relative;
+    background-color: #222;
+    overflow: hidden;
+}
+
+.progreso {
+    background-color: #00ffcc;
+    height: 100%;
+    width: 0%;
+    animation: llenarBarra 3s forwards;
+}
+
+@keyframes llenarBarra {
+    to {
+        width: 100%;
+    }
+}
+
+.mensaje-carga {
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.titulo-niveles {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #1f1f2f;
+}
+
+.niveles-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nivel-boton {
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 12px;
+    width: 150px;
+    height: 80px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.nivel-boton:hover:enabled {
+    transform: scale(1.05);
+}
+
+.desbloqueado {
+    background-color: #58d68d;
+    color: white;
+}
+
+.bloqueado {
+    background-color: #aaa;
+    color: #444;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
