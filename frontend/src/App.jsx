@@ -17,7 +17,6 @@ function App() {
         <Router>
             <Layout>
                 <Routes>
-                    <Route path="/menu" element={<MainMenu />} />
                     <Route path="/gacha/personajes" element={<GachaPersonajes />} />
                     <Route path="/gacha/armas" element={<GachaArmas />} />
                     <Route path="/inventario" element={<Inventario />} />
