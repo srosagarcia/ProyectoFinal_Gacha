@@ -4,8 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 import Layout from "./components/layout/Layout.jsx";
-import Login from "./components/login/Login.jsx";
-import MainMenu from "./components/main_menu/MainMenu.jsx";
 import GachaPersonajes from "./components/gacha/gacha_personajes/GachaPersonajes.jsx";
 import GachaArmas from "./components/gacha/gacha_armas/GachaArmas.jsx";
 import Inventario from "./components/inventario/Inventario.jsx";
