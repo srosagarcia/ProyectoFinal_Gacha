@@ -9,7 +9,7 @@ export default function MainMenu() {
             <div className="button-group">
                 <button onClick={() => navigate("/gacha/personajes")}>Banner de Personajes</button>
                 <button onClick={() => navigate("/gacha/armas")}>Banner de Armas</button>
-                <button onClick={() => navigate("/historia")}>Modo Historia</button>
+                <button onClick={() => navigate("/niveles")}>Modo Historia</button>
             </div>
         </div>
     );
