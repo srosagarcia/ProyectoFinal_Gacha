@@ -11,8 +11,17 @@ export default function Combate() {
     const [resultadoCombate, setResultadoCombate] = useState(null);
     const [dañoReciente, setDañoReciente] = useState({ nombre: null, cantidad: 0 });
 
+
+    /**
+     * Función encargada de actualizar el estado del frontend con los datos recibidos desde el backend
+     *
+     * @returns {Promise<void>} La función termina cuando  el estado ya está cargado y actualizado.
+     */
     const cargarEstado = async () => {
+        //Gestión de la petición al backend
         const res = await axios.get("http://localhost:8080/api/combate/estado");
+
+        //Datos recibidos del backend
         const data = res.data;
         setPersonajes(data.jugadores);
         setEnemigos(data.enemigos);
@@ -21,6 +30,12 @@ export default function Combate() {
         setResultadoCombate(data.resultado);
     };
 
+
+    /**
+     * Función encargada de actualiar la vida con anterioridad para el uso de la barra de vida.
+     *
+     * @returns {Promise<void>} La función termina cuando el estado de la vida ya esta cargada y actualizada.
+     */
     const cargarVida = async () => {
         const res = await axios.get("http://localhost:8080/api/combate/estado");
         const data = res.data;
@@ -28,6 +43,15 @@ export default function Combate() {
         setEnemigos(data.enemigos);
     };
 
+
+    /**
+     * Función encargada de realizar el ataque recibiendo el objetivo del backend y por ultimo
+     * aplicar el nuevo estado de los personajes.
+     *
+     * @param tipo Representa el tipo de ataque a realizar.
+     * @param objetivo Representa el objetivo al que va dirigido el ataque.
+     * @returns {Promise<void>} La función termina cuando el estado fue cargado y actualizado.
+     */
     const hacerAtaque = async (tipo, objetivo = null) => {
         if (!objetivo && objetivoSeleccionado) {
             objetivo = objetivoSeleccionado;
@@ -50,16 +74,28 @@ export default function Combate() {
         await cargarEstado();
     };
 
+
+    /**
+     * Función encargada de reiniciar la partida.
+     * @returns {Promise<void>} La función termina cuando el estado fue cargado y actualizado.
+     */
     const reiniciarPartida = async () => {
         await axios.post("http://localhost:8080/api/combate/reiniciar");
         await cargarEstado();
     };
 
 
+    /**
+     * Función encargada de la carga y actualización de estado la primera vez que se inicia el programa.
+     */
     useEffect(() => {
         cargarEstado();
     }, []);
 
+
+    /**
+     * Función que se encarga de realizar el ataque automático aleatorio del turno enemigo.
+     */
     useEffect(() => {
         if (personajeActual?.tipo === "enemigo" && personajeActual.vida > 0) {
             const vivos = personajes.filter(p => p.vida > 0);
@@ -71,6 +107,10 @@ export default function Combate() {
 
     if (!personajeActual) return <div className="combate-container">Cargando combate...</div>;
 
+
+    /**
+     * Función encargada de combinar las listas de enemigos y personajes para poder ordenarlos por velocidad.
+     */
     const ordenTurnos = [...personajes, ...enemigos].sort((a, b) => b.velocidad - a.velocidad);
 
     return (

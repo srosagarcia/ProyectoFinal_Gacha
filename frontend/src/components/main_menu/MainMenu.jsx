@@ -3,6 +3,12 @@ import { useNavigate } from "react-router-dom";
 import "./MainMenu.css";
 
 export default function MainMenu() {
+
+    /**
+     * Función encargada de la navegación entre pantallas.
+     *
+     * @type {NavigateFunction} Pantalla a la que quieres navegar.
+     */
     const navigate = useNavigate();
     return (
         <div className="bg">

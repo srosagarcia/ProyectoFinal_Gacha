@@ -2,16 +2,39 @@ import React, { useState, useEffect } from "react";
 import "./GachaArmas.css";
 
 function GachaArmas() {
+
+    /**
+     *Función encargada de encontrar dentro del almacenamiento local el pity de tiradas actual.
+     *
+     * @returns Un número en base 10 o un nulo en el caso de no encontrar nada en el almacenamiento local.
+     */
     const getInitialPity = () => {
         const saved = localStorage.getItem("pityArmas");
         return saved !== null ? parseInt(saved, 10) : 0;
     };
 
+
+    /**
+     * Función encargada de actulizar la variable resultados.
+     */
     const [results, setResults] = useState([]);
+    /**
+     * Función encargada de actualiar el contador de tiradas.
+     */
     const [pullCount, setPullCount] = useState(getInitialPity);
+    /**
+     * Función encargada de activar/desactivar la animación.
+     */
     const [animating, setAnimating] = useState(false);
+    /**
+     * Función encargada de guradar las particulas de cada nueva tirada para mostrarlas en la animación.
+     */
     const [particles, setParticles] = useState([]);
 
+
+    /**
+     * Hook de React el cual cada vez que cambia la variable pullCount la actualiza en el almacenamiento actual.
+     */
     useEffect(() => {
         localStorage.setItem("pityArmas", pullCount.toString());
     }, [pullCount]);
@@ -26,6 +49,12 @@ function GachaArmas() {
         { name: "Sacrificio", image: root + "mandoble_sacrificio.png", stars: 3 },
     ];
 
+
+    /**
+     *
+     * @param currentCount Contador que se va incrementando (representa el pity actual).
+     * @returns Un arma aleatoria de entre todas las candidatas (si el pity actual llega a 50 será 5 estrellas asegurado, si no será aleatorio).
+     */
     const pullItem = (currentCount) => {
         let stars;
         if (currentCount + 1 >= 50) {
@@ -41,6 +70,12 @@ function GachaArmas() {
         return candidates[Math.floor(Math.random() * candidates.length)];
     };
 
+
+    /**
+     * Función encargada de la animación de las tiradas.
+     *
+     * @param pulled Variable que almacena las armas de la tirada actual.
+     */
     const animatePull = (pulled) => {
         setAnimating(true);
         setResults([]);
@@ -57,6 +92,12 @@ function GachaArmas() {
         }, 1500);
     };
 
+
+    /**
+     * Función encargada de la lógica de las tiradas.
+     *
+     * @param amount Total de tiradas que debe hacer.
+     */
     const handlePull = (amount) => {
         if (animating) return;
 

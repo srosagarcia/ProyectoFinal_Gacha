@@ -3,13 +3,29 @@ import { useNavigate } from "react-router-dom";
 import "./NivelSelector.css";
 
 export default function NivelSelector() {
+    /**
+     * Función encargada de actualizar el boolean de cargando mientras la barra de progresión no
+     * haya sido ompletada.
+     */
     const [cargando, setCargando] = useState(true);
+
+
+    /**
+     * Función encargada de la navegación entre pantallas.
+     *
+     * @type {NavigateFunction} Pantalla a la que quieres navegar.
+     */
     const navigate = useNavigate();
 
+
+    /**
+     * Hook de React que carga la barra de progresión en el temporizador marcado,
+     * al acabar este temporizador cambia el boolean de cargado a false.
+     */
     useEffect(() => {
         const timer = setTimeout(() => {
             setCargando(false);
-        }, 2500); // Simula la carga durante 2.5 segundos
+        }, 2500);
         return () => clearTimeout(timer);
     }, []);
 
